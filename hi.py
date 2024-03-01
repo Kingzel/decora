@@ -1,1 +1,1 @@
-print('fahad >:) ')
+print('fahad >:)')
