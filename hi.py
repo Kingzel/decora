@@ -1,1 +1,2 @@
-print('fahad >:)')
+x = 2
+print(x)
