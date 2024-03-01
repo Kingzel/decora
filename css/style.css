@@ -265,6 +265,12 @@ header .navbar ul li a:hover{
     max-width: 70srem;
 }
 
+.home .content h1{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color:#fff;
+}
+
 .home .content h3{
     font-size: 6rem;
     text-transform: uppercase;
