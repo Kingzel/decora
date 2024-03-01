@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Colour Here!</title>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+        }
+        .dropbox {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #de807d;
+        }
+        .dropbox:hover {
+            border-color: #aaa;
+        }
+        img {
+            max-width: 100%;
+            max-height: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+    <div class="dropbox" id="dropbox">
+        <div id="editableText">Drag & Drop Here!</div>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+    </div>    
+      <div id="preview"></div>
+    
+      <script>
+        const dropbox = document.getElementById('dropbox');
+        const fileInput = document.getElementById('fileInput');
+        const preview = document.getElementById('preview');
+      
+        dropbox.addEventListener('click', () => {
+          fileInput.click();
+        });
+      
+        fileInput.addEventListener('change', () => {
+          const files = fileInput.files;
+          if (files.length > 0) {
+            preview.innerHTML = '';
+            for (const file of files) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                preview.appendChild(img);
+              }
+              reader.readAsDataURL(file);
+            }
+          }
+        });
+      </script>
+
+</body>
+</html>

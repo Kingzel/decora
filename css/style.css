@@ -2,7 +2,7 @@
 
 :root{
     --main-color:#3540d0;
-    --black:#13131a;
+    --black:hsl(240, 16%, 9%);
     --bg:#010103;
     --border:.1rem solid rgba(255, 255, 255, 0.3);
 }
@@ -22,6 +22,34 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
+}
+
+
+
+.dropbox {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: move;
+    background-color: salmon;
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    opacity: 0.0;
+}
+
+#editableText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 html::-webkit-scrollbar{
@@ -818,16 +846,17 @@ header .navbar ul li a:hover{
     box-sizing: border-box;
   }
   body {
-    background: #010103 url(../images/banner.jpg) center bottom;
     background-size: cover;
     min-height: 100vh;
     font-family:arial;
     font-size: 16px;
     margin: 0;
+    background-image: url('../images/dropdown-background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+
   }
   img{max-width: 100%;}
-  
-  
   
   #header{
     padding: 15px 30px;
