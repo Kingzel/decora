@@ -5,11 +5,11 @@ app = Flask(__name__, template_folder='web/html', static_folder='web')
 def home():
     return render_template("index.html")
 
-@app.route("/aboutus/")
+@app.route("/aboutus")
 def aboutus():
     return render_template("about.html")
 
-@app.route("/search/")
+@app.route("/search")
 def search():
     return render_template("creasingmatrices.html")
 

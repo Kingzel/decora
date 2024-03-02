@@ -4,7 +4,6 @@
     --main-color:#5F2521;
     --black:#13131a;
     --bg:#5f2521;
-
     --border:.1rem solid rgba(255, 255, 255, 0.3);
 }
 
@@ -16,8 +15,37 @@
     text-decoration: none;
     text-transform: initial;
     transition: .2s linear;
-}
 
+}
+/* .dropbox {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: move;
+    background-color: salmon;
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    opacity: 0.0;
+}
+#editableText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+} */
+.home-container{
+    background:url(../pics/dropdown-background.jpg) no repeat;
+    background-size: cover;
+    background-position: center;
+}
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -267,9 +295,14 @@ header .navbar ul li a:hover{
 .home .content{
     max-width: 70srem;
 }
+.home .content h1{
+    font-size: 9rem;
+    text-transform: uppercase;
+    color:#fff;
+}
 
 .home .content h3{
-    font-size: 6rem;
+    font-size: 4rem;
     text-transform: uppercase;
     color:#fff;
 }
