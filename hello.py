@@ -1,23 +1,37 @@
-import requests
-from PIL import Image
-from transformers import ViltProcessor, ViltForQuestionAnswering
+import decora
+from decora import questions
+import time
+
+q0 = questions[0] #vibe
+q1 =  questions[1] #color
+q2 = questions[2] #type of furniture (stylistic)
+q3 = questions[3] #furntiure article identify
 
 
-image_url = "https://cdn.discordapp.com/attachments/1145006133879246931/1213135813421039646/ezgif-1-5d3305ee3c.jpg?ex=65f45fc4&is=65e1eac4&hm=c594555ac17a6d4e37c5e968e8a90da3afad9b1502a8172405d49483c6b7bf46&"
-image = Image.open(requests.get(image_url, stream=True).raw)
+url_inp = 'C:/Users/ishan/Downloads/pizza.jpg'
 
-model = ViltForQuestionAnswering.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
-processor = ViltProcessor.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
 
-text = 'what is the vibe of this furniture'
+def print_pretty_all(url_inp):
+    acc =[]
+    for i in range(len(questions)):
+        acc.append(f'{questions[i]} ={decora.query(url=url_inp,question= questions[i],k=5)}')
+    for elem in acc:
+        print(elem)
+    # vibe = decora.query(url=url_inp,question= q0,k=5)
+    # color = decora.query(url=url_inp,question= q1,k=3)
+    # style =decora.query(url=url_inp,question= q2,k=3)
+    # article =decora.query(url=url_inp,question= q3,k=1)
 
-encoding = processor(image, text, return_tensors="pt")
-outputs = model(**encoding)
-logits = outputs.logits
+print_pretty_all(url_inp)
 
-out=[]
-for i in range(30):
-    o = model.config.id2label[i]
-    out.append(o)
 
-print("Predicted answer:", out)
+# time.sleep(5)
+# print()
+# time.sleep(5)
+
+# print()
+# time.sleep(5)
+# print()
+
+
+
