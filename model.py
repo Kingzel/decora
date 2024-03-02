@@ -1,18 +1,17 @@
 from flask import Flask, render_template, redirect, url_for
 
-app = Flask(__name__)
-
+app = Flask(__name__, template_folder='web/html', static_folder='web')
 @app.route("/")
 def home():
-    return redirect(url_for('html/index.html'))
+    return render_template("index.html")
 
 @app.route("/aboutus/")
 def aboutus():
-    return redirect(url_for("html/about.html"))
+    return render_template("about.html")
 
 @app.route("/search/")
 def search():
-    return redirect(url_for("html/creasingmatrices.html"))
+    return render_template("creasingmatrices.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

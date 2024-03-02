@@ -4,6 +4,7 @@
     --main-color:#5F2521;
     --black:#13131a;
     --bg:#5f2521;
+
     --border:.1rem solid rgba(255, 255, 255, 0.3);
 }
 
@@ -251,7 +252,7 @@ header .navbar ul li a:hover{
 }
 
 .home-container{
-    background-image:url('/pics/homepic.jpg');
+    background-image:url('homepic.jpg');
     /* background-color: #F89E9E; */
     background-size: cover;
     background-position: center;
