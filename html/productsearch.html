@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Equipment and Materials (Pvt) Ltd </title>
+    CS CSD RS CC RYU IK
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    
+    <!-- from boxicon  -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"> -->
+
+    <style>
+        .home-container {
+            position: relative;
+            background-image: url('../img/allcrez.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: 12%;
+            background-repeat: no-repeat;
+            background-color: salmon;
+            
+        }
+
+        .home-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* background-color: rgba(14, 12, 12, 0.872); Adjust the alpha channel (0 to 1) to control overlay transparency */
+        }
+
+        .home-container .content {
+            position: relative;
+            z-index: 1; /* Ensure the content is above the overlay */
+            color: #000; /* Set your desired text color */
+            padding: 50px; /* Adjust padding as needed */
+            
+        }
+        .upload-button {
+    background-color: #5F2521;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #7b3333;
+}
+    </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header id="header"><!--header-start-->
+    <div class="container">
+      <div class="header_left">
+          <a href="index.html" class="logo">
+              <img src="../img/logo-pem.png" alt="">
+          </a>
+      </div>
+      <div class="header_right">
+        <label for="menuTrigger" class="nav_ico"><i class="fa fa-bars"></i></label>
+        <input id="menuTrigger" type="checkbox" name="">
+        <nav class="main_nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="productsearch.html">Product search</a>            
+          </ul>
+        </nav>    
+      </div>
+      
+    </div>
+  </header><!--header-end-->
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<div class="home-container">
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Product Search</h3>
+            <p>Please enter the required colour palette or a picture along with the aesthetic you require.
+                </p>
+          
+        </div>
+    
+    </section>
+
+</div>
+<!--  -->
+<style>
+ /* Variables */
+:root {
+  
+  --dark-grey: #888;
+  --grey: #bbb;
+  --light-grey: salmon;
+}
+
+/* Global Styles */
+/* html, body, main {
+  height: 100%;
+} */
+
+/* main {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+} */
+
+/* h1 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--grey);
+}
+
+h1 span {
+  border: 2px solid var(--light-grey);
+  padding: 3px 2px 3px 7px;
+  border-radius: 6px;
+  font-weight: 400;
+} */
+
+p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tags Input */
+.tags-input {
+  border: 2px solid var(--light-grey);
+  border-radius: 40px;
+  height: 40px;
+  padding: 0 11px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--dark-grey);
+}
+
+.tags-input span {
+  background: var(--grey);
+  margin-right: 7px;
+  color: var(--white);
+  padding: 4px 7px;
+  border-radius: 20px;
+}
+
+.tags-input span[data-selected] {
+  background: var(--blue);
+}
+.tags-input::after {
+  content: '';
+  background: var(--dark-grey);
+  width: 1px;
+  height: 19px;
+  margin: -1px 0 0 -1px;
+  display: none;
+  animation: blink 0.5s infinite alternate;
+}
+
+.tags-input:focus {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.tags-input[data-cursor]::after {
+  display: block;
+}
+
+@media screen and (max-width: 736px) {
+  .tags-input::after {
+    display: none;
+  }
+}
+
+/* Animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.hcontainer {
+      max-width: 600px;
+      margin:  auto;
+      text-align: center;
+      color: salmon;
+    }
+    #image-preview {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    #color-input {
+      width: 200px;
+      height: 40px;
+      margin-bottom: 20px;
+    }
+  </style>
+
+<div class="hcontainer">
+    <h2>Choose an Option:</h2>
+    <button class="upload-button">Upload Picture</button>
+    <div class="dropbox" id="dropbox">
+        <div id="editableText">Drag & Drop Here!</div>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+    </div>
+    <div id="preview"></div>
+    <div id="option-2">
+        <h3>Choose a Color from Palette</h3>
+        <input type="color" id="color-input">
+    </div>
+</div>
+
+  <p>Separate your tags with a comma</p>
+  <div class="tags-input"></div>
+  <h1><span>Tags</span> Input</h1>
+ 
+    
+  <script>
+    var TagsInput = function(element) { 
+  var self = this;
+  var initChar = "\u200B";
+  var initCharPattern = new RegExp(initChar, 'g');
+  
+  var insert = function(element) {
+     if(self.textNode) self.element.insertBefore(element, self.textNode);
+     else self.element.appendChild(element);
+  };
+  
+  var updateCursor = function() {
+    self.cursor = self.blank;
+  };
+  
+  var keydown = function(event) {
+    if(event.keyCode == 188) {
+      event.preventDefault();
+      setTimeout(function() {
+        var text = self.text;
+        if(text) {
+          self.text = initChar;
+          self.add(text);
+        }
+      }, 1);
+    }
+    else if(event.keyCode == 8) {
+      if(self.text.replace(initCharPattern, '') == '') {
+        self.text = initChar+initChar;
+        if(self.selected) {
+          self.element.removeChild(self.selected);
+        }
+        else {
+          var tags = self.tags;
+          var keys = Object.keys(tags)
+          if(keys.length > 0) {
+            var tag = tags[keys[keys.length-1]];
+            tag.setAttribute('data-selected', '');
+          }
+        }
+      }
+    }
+    
+    if(event.keyCode !== 8) {
+      if(self.selected) self.selected.removeAttribute('data-selected');
+    }
+    setTimeout(function() {
+      updateCursor();
+    }, 1);
+  };
+  
+  var focus = function() {
+    updateCursor();
+  };
+  
+  Object.defineProperties(this, {
+    element: {
+      get: function() {
+        return element;
+      },
+      set: function(v) {
+        if(typeof v == 'string') v = document.querySelector(v);
+        element = v instanceof Node ? v : document.createElement('div');
+        if(!element.className.match(/\btags-input\b/)) element.className += ' tags-input';
+        if(element.getAttribute('contenteditable') != 'true') element.setAttribute('contenteditable', 'true');
+        
+        element.removeEventListener('keydown', keydown);
+        element.addEventListener('keydown', keydown);
+        
+        element.removeEventListener('focus', focus);
+        element.addEventListener('focus', focus);
+        this.text = initChar;
+      }
+    },
+    tags: {
+      get: function() {
+        var element;
+        var elements = this.element.querySelectorAll('span');
+        var tags = {};
+        for(var i = 0; i < elements.length; i++) {
+          element = elements[i]
+          tags[element.innerText] = element;
+        }
+        
+        return tags;
+      }
+    },
+    lastChild: {
+      get: function() {
+        return this.element.lastChild;
+      }
+    },
+    textNode: {
+      get: function() {
+        return this.element.lastChild instanceof Text ? this.element.lastChild : null;
+      }
+    },
+    text: {
+      get: function() {
+        return this.textNode ? this.textNode.data : null;
+      },
+      set: function(v) {
+        if(!this.textNode) this.element.appendChild(document.createTextNode(','));
+        this.textNode.data = v;
+      },
+    },
+    cursor: {
+      get: function() {
+        return this.element.getAttribute('data-cursor') !== null;
+      },
+      set: function(v) {
+        if(v) this.element.setAttribute('data-cursor', '');
+        else this.element.removeAttribute('data-cursor');
+      }
+    },
+    focused: {
+      get: function() {
+        return document.activeElement == this.element;
+      }
+    },
+    blank: {
+      get: function() {
+        return this.text.replace(initCharPattern, '') == '';
+      }
+    },
+    selected: {
+      get: function() {
+        return this.element.querySelector('span[data-selected]');
+      }
+    }
+  });
+  
+  this.add = function(tag) {
+    tag = tag.replace(initCharPattern, '');
+    tag = tag.replace(/^\s+/, '').replace(/\s+$/, '');
+    tag = tag[0].toUpperCase()+tag.toLowerCase().slice(1);
+    if(tag != '' && this.tags[tag] === undefined) {
+      var element = document.createElement('span');
+      element.appendChild(document.createTextNode(tag));
+      element.setAttribute('contenteditable', 'false');
+      
+      insert(element);
+    }
+  };
+  
+  this.remove = function(tag) {
+     var element = this.tags[tag];
+     if(element) this.element.removeChild(element);
+  };
+  
+  this.element = element;
+};
+
+var input = new TagsInput('.tags-input');
+  </script>
+
+
+
+<section class="footer">
+    <div class="container">
+                      
+
+              <div class="col" id="useful-links">
+                 <h3>Links</h3>
+                 <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="productsearch.html">Product Search</a>
+               
+                 </div>
+              </div>
+              <div class="col" id="useful-links">
+                
+             </div>
+
+
+             
+        </div>
+
+        
+
+    </div>
+
+   
+
+   
+    
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="../js/script.js"></script>
+
+</body>
+</html>
