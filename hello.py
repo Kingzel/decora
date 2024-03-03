@@ -1,37 +1,57 @@
 import decora
-from decora import questions
+from decora import questions_inb
 import time
-
-q0 = questions[0] #vibe
-q1 =  questions[1] #color
-q2 = questions[2] #type of furniture (stylistic)
-q3 = questions[3] #furntiure article identify
-
-
-url_inp = 'C:/Users/ishan/Downloads/pizza.jpg'
+from PIL import Image
+import requests
+from apiloader import search_load
+import pandas as pd
 
 
-def print_pretty_all(url_inp):
-    acc =[]
+search_df = search_load("table")
+print(search_df.shape)
+time.sleep(10)
+url = "C:/Users/ishan/Downloads/pizza2.jpg"
+
+
+def metadata_gen(url_inp,k,foreign,questions=questions_inb):
+    tokens=[]
     for i in range(len(questions)):
-        acc.append(f'{questions[i]} ={decora.query(url=url_inp,question= questions[i],k=5)}')
-    for elem in acc:
-        print(elem)
-    # vibe = decora.query(url=url_inp,question= q0,k=5)
-    # color = decora.query(url=url_inp,question= q1,k=3)
-    # style =decora.query(url=url_inp,question= q2,k=3)
-    # article =decora.query(url=url_inp,question= q3,k=1)
+        question =questions[i]
+        probs = decora.query(url=url_inp,question= question,k=k,foreign=foreign)
+        for hashmap in probs:
+            tokens.append(hashmap['answer'])   
+    return tokens
 
-print_pretty_all(url_inp)
+tokens_main =metadata_gen(url,3,False,questions_inb)
 
+question_string = ''
+for token_ind in range(len(tokens_main)):
+    question_string += f'Is this {tokens_main[token_ind]} '
+    if not (token_ind == len(tokens_main) - 1):
+            question_string += 'and '
 
-# time.sleep(5)
-# print()
-# time.sleep(5)
+question_string+='?'
+print(question_string)
+time.sleep(10)
 
-# print()
-# time.sleep(5)
-# print()
-
-
+cand =[]
+for i in range(20):
+    
+    
+    image_url = search_df.iloc[i]['contextualImageUrl']
+    if not image_url:
+         image_url = search_df.iloc[i]["mainImageUrl"]
+    # print(image_url)
+    binary =  metadata_gen(image_url,1,True,[question_string,]) 
+    
+    if binary[0] =='yes':
+        cand.append(i)
+i=0
+send = []
+for el in cand:
+    if i ==4:
+         break
+    send.append([search_df.iloc[el]['name'],search_df.iloc[el]['salesPrice'],search_df.iloc[el]['mainImageUrl']])
+    i +=1
+print(send)
 
