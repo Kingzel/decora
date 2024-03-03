@@ -6,7 +6,7 @@ import requests
 questions_inb=[ "color" ,
    "type of design furniture","describe vibe"]
     
-# b
+# bb
 
 # question = "vibe of this object"
 # question2 = 'is this danger'

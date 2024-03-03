@@ -1,0 +1,76 @@
+<div class="container mt-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-9">
+        <div class="card p-4 mt-3">
+          <div class="d-flex justify-content-center px-5">
+            <div class="search">
+              <input type="text" class="search-input" placeholder="Search..." name="">
+              <a href="#" class="search-icon">
+                <!-- Image acts as the button -->
+                <img src="search-icon.jpg" width="20" height="20" alt="Search Icon" onclick="handleSearch()">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-9">
+        <div class="card p-4 mt-3">
+          <div class="container" id="buttonContainer"></div> <!-- Container to hold the buttons -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Array of records with details
+    var records = [
+      {
+        link: "https://www.ikea.com/au/en/p/kivik-3-seat-sofa-with-chaise-longue-tibbleby-beige-grey-s19440589/",
+        image: "test-image-1.jpg",
+        name: "KIVIK (3-seat sofa with chaise lounge)",
+        color: "Tibbleby beige/grey",
+        price: "$999"
+      },
+      // Add more records as needed
+    ];
+  
+    // Get the container where buttons will be appended
+    var container = document.getElementById('buttonContainer');
+  
+    // Iterate over each record and create a button dynamically
+    records.forEach(function(record) {
+      // Create a new button element
+      var button = document.createElement('button');
+      button.setAttribute('type', 'button');
+      button.classList.add('btn', 'btn-primary', 'custom-button');
+      button.onclick = function() {
+        window.location.href = record.link;
+      };
+  
+      // Create an image element
+      var img = document.createElement('img');
+      img.classList.add('img-fluid', 'button-image');
+      img.setAttribute('src', record.image);
+      img.setAttribute('alt', 'Button Image');
+  
+      // Create a span element for the button text
+      var buttonText = document.createElement('span');
+      buttonText.classList.add('button-text');
+      buttonText.innerHTML = "Name: " + record.name + "<br> Color: " + record.color + "<br> Price: " + record.price;
+  
+      // Append the image and text to the button
+      button.appendChild(img);
+      button.appendChild(document.createElement('br'));
+      button.appendChild(buttonText);
+  
+      // Append the button to the container
+      container.appendChild(button);
+    });
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
