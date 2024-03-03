@@ -39,7 +39,7 @@ def gen_everything(url_specific, art):
     # time.sleep(10)
 
     cand =[]
-    for i in range(2):
+    for i in range(7):
         
         
         image_url = search_df.iloc[i]['contextualImageUrl']
