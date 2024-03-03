@@ -45,29 +45,16 @@
                         
                         <div class="blog__item">
                             
-                            <h2>Upload an Image</h2>
-                            <form action="/upload" method="POST" enctype="multipart/form-data">
-                            <img src="img/blog/blog-2.jpg" alt="">
+                            <h2>Enter the URL to an image that inspires!</h2>
+                            <form action="/process_url" method="POST" >
                             <div class="blog__item__text">
-                                <input type="file" id="image-upload" accept="image/*">
-                                <div id="image-preview"></div>
-                                <p></p>
-                                <input type = "submit" value="Upload"/>
+                                <label>Your URL goes here:</label>
+                                <input type = "text" type="url" name="url">
+                                <input type="submit">
                             </div>
                         </form>
                         </div>
-                        <div class="blog__item">
-                            
-                            <h2>Choose a colour from the palette</h2>
-                            <img src="img/blog/blog-2.jpg" alt="">
-                            <div class="blog__item__text">
-                                <input type="color" id="color-input">
-                                <p>Separate your tags with a comma</p>
-                                <div class="tags-input"></div>
-                                <h5>Tags Input</h5>
-                                <input type="text" id="tag-input1">
-                                <p></p>
-                                <input type = "submit"/>
+
                             
                             </div>
                             
