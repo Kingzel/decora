@@ -31,7 +31,7 @@ for token_ind in range(len(tokens_main)):
             question_string += 'and '
 
 question_string+='?'
-print(question_string)
+# print(question_string)
 time.sleep(10)
 
 cand =[]
