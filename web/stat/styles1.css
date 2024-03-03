@@ -15,8 +15,9 @@
   color: #fff; /* White text color */
   border: 2px solid rgb(28, 23, 23); /* Red border */
   border-radius: 10px; /* Rounded corners */
-  padding: 10px 20px; /* Padding */
+  padding: 5px 10px; /* Padding */
   font-size: 18px; /* Font size */
+  margin-top: 10%;
 }
 
 .custom-button:hover {
@@ -25,8 +26,8 @@
 }
 
 .button-image {
-  width: 400px; /* Adjust maximum width */
-  height: 400px; /* Maintain aspect ratio */
+  width: 150px; /* Adjust maximum width */
+  height: 100px; /* Maintain aspect ratio */
 }
 
 .button-text {

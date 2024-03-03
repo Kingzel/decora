@@ -39,7 +39,7 @@ def gen_everything(url_specific, art):
     # time.sleep(10)
 
     cand =[]
-    for i in range(10):
+    for i in range(2):
         
         
         image_url = search_df.iloc[i]['contextualImageUrl']
@@ -55,7 +55,7 @@ def gen_everything(url_specific, art):
     for el in cand:
         if i ==4:
             break
-        send.append([search_df.iloc[el]['pipUrl'],search_df.iloc[el]['mainImageUrl']])
+        send.append([search_df.iloc[el]['name'],search_df.iloc[el]['pipUrl'],search_df.iloc[el]['mainImageUrl']])
         i +=1
     # print(send)
     return send
