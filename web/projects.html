@@ -46,13 +46,15 @@
                         <div class="blog__item">
                             
                             <h2>Upload an Image</h2>
+                            <form action="/upload" method="POST" enctype="multipart/form-data">
                             <img src="img/blog/blog-2.jpg" alt="">
                             <div class="blog__item__text">
                                 <input type="file" id="image-upload" accept="image/*">
                                 <div id="image-preview"></div>
                                 <p></p>
-                                <input type = "submit"/>
+                                <input type = "submit" value="Upload"/>
                             </div>
+                        </form>
                         </div>
                         <div class="blog__item">
                             
