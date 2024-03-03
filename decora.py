@@ -7,7 +7,7 @@ import os
 questions=["describe vibe",
     "color", "type of design furniture", 'identify furniture']
     
-# b
+# bb
 
 # question = "vibe of this object"
 # question2 = 'is this danger'
